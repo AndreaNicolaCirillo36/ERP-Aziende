@@ -123,6 +123,6 @@ Siamo aperti ai contributi! Se desideri contribuire:
 
 **Frontend**: Il frontend del progetto è distribuito sotto licenza MIT. Consulta il file [frontend/LICENSE](frontend/LICENSE) per maggiori dettagli.
 
-**Backend**: Il backend del progetto è distribuito sotto licenza Apache License 2.0. Consulta il file [backend/LICENSE](backend/LICENSE) per maggiori dettagli.
+**Backend**: Il backend del progetto è distribuito sotto licenza GNU General Public License v3 Consulta il file [backend/LICENSE](backend/LICENSE) per maggiori dettagli.
 
 ⚠️ **Nota**: Questo progetto è attualmente **in fase di sviluppo** e non è ancora completo.
