@@ -10,7 +10,7 @@ const AuthService = {
    * @return {Promise<AxiosResponse>} - La risposta del server.
    */
   async login(username, password) {
-    return axios.post('/api/auth/login', {
+    return axios.post('/auth/login', {
       username,
       password
     });
@@ -25,7 +25,7 @@ const AuthService = {
    * @return {Promise<AxiosResponse>} - La risposta del server dopo il tentativo di registrazione.
    */
   async addUser(username, password, role) {    
-    return axios.post('/api/users/register', {
+    return axios.post('/users/register', {
       username,
       password,
       role
@@ -37,7 +37,7 @@ const AuthService = {
    * @return {Promise<AxiosResponse>} - La risposta del server contenente i dettagli dell'utente predefinito.
    */
   async defaultUser() {    
-    return axios.get('/api/users/defaultUser');
+    return axios.get('/users/defaultUser');
   },
 
  
@@ -59,7 +59,7 @@ const AuthService = {
     if (refreshToken) {
       try {
         if (isRefreshTokenValid()) {
-          const response = await axios.post('/api/auth/refresh-token', { refreshToken });
+          const response = await axios.post('/auth/refresh-token', { refreshToken });
           if (response.status === 200) {
             const { accessToken } = response.data;
             saveToken(accessToken, refreshToken);

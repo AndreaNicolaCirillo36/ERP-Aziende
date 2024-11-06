@@ -14,7 +14,7 @@ export const SaleService = {
  */
     async getSales() {
         try {
-            const response = await axios.get('http://localhost:8080/sales');
+            const response = await axios.get('/sales');
             return response.data;
         } catch (error) {
             console.error('Errore durante il recupero delle vendite:', error);
