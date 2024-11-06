@@ -1,0 +1,11 @@
+.vc-container .vc-weekday-1, .vc-container .vc-weekday-7 {
+  color:  rgb(16, 185, 129);
+}
+
+.vc-container .vc-weekday-2, .vc-container .vc-weekday-3, .vc-container .vc-weekday-4, .vc-container .vc-weekday-5, .vc-container .vc-weekday-6 {
+  color: rgb(36, 116, 89);
+}
+
+.vc-highlight-solid-bg{
+    color:  rgb(16, 185, 129);
+}
