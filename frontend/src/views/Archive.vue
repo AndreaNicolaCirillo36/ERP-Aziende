@@ -241,12 +241,12 @@ const deleteSale = async (id) => {
                             {{ formatCurrency(slotProps.data.discount) }}
                         </template>
                     </Column>
-                    <Column field="aggio" header="Aggio" style="width: 15%">
+                    <Column field="profitto" header="Profitto" style="width: 15%">
                         <template #body="slotProps">
                             {{ formatCurrency(slotProps.data.netProfit) }}
                         </template>
                     </Column>
-                    <Column field="totaleFinale" header="Totale" style="width: 15%">
+                    <Column field="totale" header="Totale" style="width: 15%">
                         <template #body="slotProps">
                             {{ formatCurrency(slotProps.data.totalPrice) }}
                         </template>
@@ -287,7 +287,7 @@ const deleteSale = async (id) => {
                         <td class="border px-4 py-2">{{ selectedSale.paymentMethods }}</td>
                     </tr>
                     <tr>
-                        <td class="font-bold border px-4 py-2">Totale</td>
+                        <td class="font-bold border px-4 py-2">Importo</td>
                         <td class="border px-4 py-2">
                             {{ formatCurrency(selectedSale.totalPrice + selectedSale.discount) }}
                         </td>
@@ -299,13 +299,13 @@ const deleteSale = async (id) => {
                         </td>
                     </tr>
                     <tr>
-                        <td class="font-bold border px-4 py-2">Aggio</td>
+                        <td class="font-bold border px-4 py-2">Profitto</td>
                         <td class="border px-4 py-2">
                             {{ formatCurrency(selectedSale.netProfit) }}
                         </td>
                     </tr>
                     <tr>
-                        <td class="font-bold border px-4 py-2">Totale Finale</td>
+                        <td class="font-bold border px-4 py-2">Totale</td>
                         <td class="border text-green-500 px-4 py-2">
                             {{ formatCurrency(selectedSale.totalPrice) }}
                         </td>

@@ -75,7 +75,7 @@ const totalAmount = computed(() => {
     return productList.value.reduce((acc, product) => acc + product.totalPrice, 0) - discount.value;
 });
 
-const totalAggio = computed(() => {
+const totalProfitto = computed(() => {
     const profitWithoutDiscount = productList.value.reduce((acc, product) => acc + (product.sellingPrice - product.purchasePrice) * product.quantity, 0);
     return profitWithoutDiscount - discount.value;
 });
@@ -231,9 +231,9 @@ const saveSale = async () => {
             <div class="card mb-0">
                 <div class="flex justify-between mb-4">
                     <div>
-                        <span class="block text-muted-color font-medium mb-4">Aggio</span>
+                        <span class="block text-muted-color font-medium mb-4">Profitto</span>
                         <div class="text-surface-900 dark:text-surface-0 font-medium text-xl">{{
-                            formatCurrency(totalAggio) }}</div>
+                            formatCurrency(totalProfitto) }}</div>
                     </div>
                     <div class="flex items-center justify-center bg-cyan-100 dark:bg-cyan-400/10 rounded-border"
                         style="width: 2.5rem; height: 2.5rem">

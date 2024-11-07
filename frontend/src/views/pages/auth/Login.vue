@@ -69,7 +69,7 @@ const login = async () => {
       const status = error.response.status;
 
       // Gestione specifica degli errori di risposta del server
-      if (status === 401 || status === 403) {
+      if (status === 400 || status === 401 || status === 403) {
         errorMessage.value = 'Credenziali non valide';
       } else if (status === 500) {
         errorMessage.value = 'Errore interno del server. Si prega di riprovare più tardi.';

@@ -8,11 +8,11 @@ const sales = ref([]);
 const salesToday = ref([]);
 const nrSalesToday = ref(0);
 const incassoToday = ref(0);
-const aggioToday = ref(0);
+const profittoToday = ref(0);
 const salesMonth = ref([]);
 const nrSalesMonth = ref(0);
 const incassoMonth = ref(0);
-const aggioMonth = ref(0);
+const profittoMonth = ref(0);
 const errorMessage = ref('');
 
 onMounted(async () => {
@@ -24,13 +24,13 @@ onMounted(async () => {
         salesToday.value = todaySales;
         nrSalesToday.value = todaySales.length;
         incassoToday.value = parseFloat(todaySales.reduce((total, sale) => total + sale.totalPrice, 0).toFixed(2));
-        aggioToday.value = parseFloat(todaySales.reduce((total, sale) => total + sale.netProfit, 0).toFixed(2));
+        profittoToday.value = parseFloat(todaySales.reduce((total, sale) => total + sale.netProfit, 0).toFixed(2));
 
         const monthSales = await SaleService.getSalesCurrentMonth();
         salesMonth.value = monthSales;
         nrSalesMonth.value = monthSales.length;
         incassoMonth.value = parseFloat(monthSales.reduce((total, sale) => total + sale.totalPrice, 0).toFixed(2));
-        aggioMonth.value = parseFloat(monthSales.reduce((total, sale) => total + sale.netProfit, 0).toFixed(2));
+        profittoMonth.value = parseFloat(monthSales.reduce((total, sale) => total + sale.netProfit, 0).toFixed(2));
     } catch (error) {
         errorMessage.value = 'Errore durante il caricamento delle vendite.';
     }
@@ -103,15 +103,15 @@ const attrsCalendar = ref([
             <div class="card mb-0">
                 <div class="flex justify-between mb-4">
                     <div>
-                        <span class="block text-muted-color font-medium mb-4">Aggio</span>
-                        <div class="text-surface-900 dark:text-surface-0 font-medium text-xl">€ {{ aggioToday }}</div>
+                        <span class="block text-muted-color font-medium mb-4">Profitto</span>
+                        <div class="text-surface-900 dark:text-surface-0 font-medium text-xl">€ {{ profittoToday }}</div>
                     </div>
                     <div class="flex items-center justify-center bg-cyan-100 dark:bg-cyan-400/10 rounded-border"
                         style="width: 2.5rem; height: 2.5rem">
                         <i class="pi pi-euro text-green-500 !text-xl"></i>
                     </div>
                 </div>
-                <span class="text-primary font-medium">€ {{ aggioMonth }} </span>
+                <span class="text-primary font-medium">€ {{ profittoMonth }} </span>
                 <span class="text-muted-color"> questo mese</span>
             </div>
         </div>
@@ -131,7 +131,7 @@ const attrsCalendar = ref([
                             {{ formatDateTime(slotProps.data.saleDate) }}
                         </template>
                     </Column>
-                    <Column field="totale" header="Tot." style="width: 15%">
+                    <Column field="importo" header="Importo" style="width: 15%">
                         <template #body="slotProps">
                             {{ formatCurrency(slotProps.data.totalPrice + slotProps.data.discount) }}
                         </template>
@@ -141,7 +141,7 @@ const attrsCalendar = ref([
                             {{ formatCurrency(slotProps.data.discount) }}
                         </template>
                     </Column>
-                    <Column field="aggio" header="Aggio" style="width: 15%">
+                    <Column field="profitto" header="Profitto" style="width: 15%">
                         <template #body="slotProps">
                             {{ formatCurrency(slotProps.data.netProfit) }}
                         </template>
