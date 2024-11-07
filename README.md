@@ -32,7 +32,7 @@ Il progetto è suddiviso in due parti principali:
 - **Gestione Fornitori**: Funzionalità per aggiungere e modificare i fornitori dei prodotti.
 - **Autenticazione JWT**: Autenticazione sicura utilizzando JSON Web Token.
 - **Interfaccia Utente Intuitiva**: Utilizzo del tema Sakaivue con componenti personalizzati per un'interfaccia moderna.
-- **Creazione Utente di Default**: Al primo avvio, se non esiste nessun utente, viene creato un utente di default con username `admin` e password `admin123`. L'utente sarà eliminato dopo la creazione di un nuovo utente amministratore.
+- **Creazione Utente di Default**: Al primo avvio, se non esiste nessun utente, viene creato un utente di default con username `admin` e password `Admin123!`. L'utente sarà eliminato dopo la creazione di un nuovo utente amministratore.
 
 ## Tecnologie Utilizzate
 
