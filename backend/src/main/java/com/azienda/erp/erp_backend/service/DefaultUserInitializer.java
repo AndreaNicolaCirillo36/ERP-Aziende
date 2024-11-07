@@ -41,7 +41,7 @@ public class DefaultUserInitializer {
         if (userRepository.count() == 0) {
             User defaultUser = new User();
             defaultUser.setUsername("admin");
-            defaultUser.setPassword(passwordEncoder.encode("admin123")); // Codifica la password per sicurezza
+            defaultUser.setPassword(passwordEncoder.encode("Admin123!")); // Codifica la password per sicurezza
             defaultUser.setRole("ADMIN");
             userRepository.save(defaultUser); // Salva l'utente nel database
             logger.info("Utente di default creato con successo: admin/admin123");
