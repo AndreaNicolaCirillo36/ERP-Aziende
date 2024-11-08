@@ -29,14 +29,15 @@ Il progetto è suddiviso in due parti principali:
 ## Caratteristiche
 
 - **Gestione Prodotti**: CRUD completo per la gestione dei prodotti aziendali.
-- **Gestione Fornitori**: Funzionalità per aggiungere e modificare i fornitori dei prodotti.
+- **Gestione Vendite**: Funzionalità per aggiungere e modificare le vendite effettuate.
 - **Autenticazione JWT**: Autenticazione sicura utilizzando JSON Web Token.
-- **Interfaccia Utente Intuitiva**: Utilizzo del tema Sakaivue con componenti personalizzati per un'interfaccia moderna.
+- **Interfaccia Utente Intuitiva**: Utilizzo del tema Sakaivue personalizzato per adattarlo al porgetto e avere un'interfaccia moderna.
 - **Creazione Utente di Default**: Al primo avvio, se non esiste nessun utente, viene creato un utente di default con username `admin` e password `Admin123!`. L'utente sarà eliminato dopo la creazione di un nuovo utente amministratore.
+- **Altre funzioni verranno implementate in futuro...**
 
 ## Tecnologie Utilizzate
 
-- **Backend**: Java 17, Spring Boot, JPA/Hibernate, MySQL
+- **Backend**: Java 17, Spring Boot, MySQL
 - **Frontend**: Vue.js 3, Vite, PrimeVue
 - **Autenticazione**: JWT (JSON Web Token)
 - **Integrazione API**: Axios per le chiamate API
@@ -92,7 +93,7 @@ Assicurati di avere installato:
 Una volta avviati il backend e il frontend:
 
 - Vai su `http://localhost:5173` nel tuo browser.
-- Usa le credenziali predefinite (`admin`/`admin123`) per autenticarti. Alla prima autenticazione, ti verrà chiesto di creare un nuovo utente amministratore, dopo di che l'utente di default verrà eliminato per motivi di sicurezza.
+- Usa le credenziali predefinite (`admin`/`Admin123!`) per autenticarti. Alla prima autenticazione, ti verrà chiesto di creare un nuovo utente amministratore, dopo di che l'utente di default verrà eliminato per motivi di sicurezza.
 
 ## API Documentation
 
@@ -102,7 +103,7 @@ La documentazione del backend è disponibile utilizzando **Swagger**. Per visual
 
 ## Contribuire
 
-Siamo aperti ai contributi! Se desideri contribuire:
+Se desideri contribuire:
 
 1. Fai un fork del progetto.
 2. Crea un nuovo branch:
@@ -121,8 +122,8 @@ Siamo aperti ai contributi! Se desideri contribuire:
 
 ## Licenza
 
-**Frontend**: Il frontend del progetto è distribuito sotto licenza MIT. Consulta il file [frontend/LICENSE](frontend/LICENSE) per maggiori dettagli.
+**Frontend**: Il frontend del progetto è distribuito sotto licenza MIT. Consulta il file [frontend/LICENSE](frontend/LICENSE.md) per maggiori dettagli.
 
-**Backend**: Il backend del progetto è distribuito sotto licenza GNU General Public License v3 Consulta il file [backend/LICENSE](backend/LICENSE) per maggiori dettagli.
+**Backend**: Il backend del progetto è distribuito sotto licenza GNU General Public License v3 Consulta il file [backend/LICENSE](backend/LICENSE.md) per maggiori dettagli.
 
 ⚠️ **Nota**: Questo progetto è attualmente **in fase di sviluppo** e non è ancora completo.
