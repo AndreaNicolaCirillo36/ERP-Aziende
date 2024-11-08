@@ -31,7 +31,7 @@ Il progetto è suddiviso in due parti principali:
 - **Gestione Prodotti**: CRUD completo per la gestione dei prodotti aziendali.
 - **Gestione Vendite**: Funzionalità per aggiungere e modificare le vendite effettuate.
 - **Autenticazione JWT**: Autenticazione sicura utilizzando JSON Web Token.
-- **Interfaccia Utente Intuitiva**: Utilizzo del tema Sakaivue personalizzato per adattarlo al porgetto e avere un'interfaccia moderna.
+- **Interfaccia Utente Intuitiva**: Utilizzo del tema Sakaivue personalizzato per adattarlo al progetto e avere un'interfaccia moderna.
 - **Creazione Utente di Default**: Al primo avvio, se non esiste nessun utente, viene creato un utente di default con username `admin` e password `Admin123!`. L'utente sarà eliminato dopo la creazione di un nuovo utente amministratore.
 - **Altre funzioni verranno implementate in futuro...**
 
