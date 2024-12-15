@@ -10,7 +10,8 @@ const model = ref([
             { label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' },
             { label: 'Sales', icon: 'pi pi-fw pi-shopping-cart', to: '/sales' },
             { label: 'Archive', icon: 'pi pi-fw pi-folder-open', to: '/archive' },
-            { label: 'Products', icon: 'pi pi-fw pi-database', to: '/products' }
+            { label: 'Products', icon: 'pi pi-fw pi-database', to: '/products' },
+            { label: 'Suppliers', icon: 'pi pi-fw pi-shopping-bag', to: '/supplier' }
         ]
     }
 ]);
